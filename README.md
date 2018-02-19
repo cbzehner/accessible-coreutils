@@ -33,33 +33,33 @@ The default delimiter should always be spaces. Other delimiters can be specified
 # Progress
 Currently 0%.
 
-* [] cat -> print
-* [] cd -> go/change/...?
-* [] cmp -> compare
-* [] compress -> compress
-* [] cp -> copy
-* [] cut -> ???
-* [] ed -> edit
-* [] env -> environment
-* [] file -> file
-* [] find -> search
-* [] less -> view
-* [] link -> ?
-* [] ln -> ?
-* [] ls -> list
-* [] make -> make
-* [] man -> docs
-* [] mkdir -> create --dir/--file
-* [] mv -> move
-* [] mv -> rename
-* [] ps -> process
-* [] pwd -> where
-* [] rm -> delete
-* [] rm -> remove
-* [] sleep -> sleep
-* [] sort -> sort
-* [] time -> profile (include info about memory usage as well)
-* [] uniq -> unique
-* [] wc -> count
-* [] who -> who
-* [] yes -> yes
+* [ ] cat -> print
+* [ ] cd -> go/change/...?
+* [ ] cmp -> compare
+* [ ] compress -> compress
+* [ ] cp -> copy
+* [ ] cut -> ???
+* [ ] ed -> edit
+* [ ] env -> environment
+* [ ] file -> file
+* [ ] find -> search
+* [ ] less -> view
+* [ ] link -> ?
+* [ ] ln -> ?
+* [ ] ls -> list
+* [ ] make -> make
+* [ ] man -> docs
+* [ ] mkdir -> create --dir/--file
+* [ ] mv -> move
+* [ ] mv -> rename
+* [ ] ps -> process
+* [ ] pwd -> where
+* [ ] rm -> delete
+* [ ] rm -> remove
+* [ ] sleep -> sleep
+* [ ] sort -> sort
+* [ ] time -> profile (include info about memory usage as well)
+* [ ] uniq -> unique
+* [ ] wc -> count
+* [ ] who -> who
+* [ ] yes -> yes
