@@ -17,7 +17,7 @@ When possible, provide guidance for new users to proceed from basic use cases (e
 # Standard Options
 
 | Long name | Short name | Description | Type |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | delimiter | d | Override the default delimiter | Option |
 | dir | N/A | Act on a directory | Flag |
 | file | N/A | Act on a file | Flag |
@@ -33,33 +33,33 @@ The default delimiter should always be spaces. Other delimiters can be specified
 # Progress
 Currently 0%.
 
-[] less -> view
-[] ls -> list
-[] mv -> move
-[] mv -> rename
-[] rm -> delete
-[] rm -> remove
-[] sort -> sort
-[] cut -> ???
-[] mkdir -> create --dir/--file
-[] cd -> go/change/...?
-[] make -> make
-[] cat -> print
-[] cmp -> compare
-[] cp -> copy
-[] yes -> yes
-[] compress -> compress
-[] ed -> edit
-[] env -> environment
-[] file -> file
-[] ln -> ?
-[] link -> ?
-[] find -> search
-[] man -> docs
-[] pwd -> where
-[] ps -> process
-[] sleep -> sleep
-[] time -> profile (include info about memory usage as well)
-[] uniq -> unique
-[] wc -> count
-[] who -> who
+* [] less -> view
+* [] ls -> list
+* [] mv -> move
+* [] mv -> rename
+* [] rm -> delete
+* [] rm -> remove
+* [] sort -> sort
+* [] cut -> ???
+* [] mkdir -> create --dir/--file
+* [] cd -> go/change/...?
+* [] make -> make
+* [] cat -> print
+* [] cmp -> compare
+* [] cp -> copy
+* [] yes -> yes
+* [] compress -> compress
+* [] ed -> edit
+* [] env -> environment
+* [] file -> file
+* [] ln -> ?
+* [] link -> ?
+* [] find -> search
+* [] man -> docs
+* [] pwd -> where
+* [] ps -> process
+* [] sleep -> sleep
+* [] time -> profile (include info about memory usage as well)
+* [] uniq -> unique
+* [] wc -> count
+* [] who -> who
