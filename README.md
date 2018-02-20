@@ -18,12 +18,18 @@ When possible, provide guidance for new users to proceed from basic use cases (e
 
 | Long name | Short name | Description | Type |
 | --- | :---: | --- | --- |
+| color | N/A | Colorize output | Flag |
+| count | c | Output count instead | Flag |
 | delimiter | d | Override the default delimiter | Option |
-| dir | N/A | Act on a directory | Flag |
-| file | N/A | Act on a file | Flag |
+| depth | N/A | Limit depth of actions | Option |
+| dir(ectory) | N/A | Act on a directory | Flag |
+| file(s) | N/A | Act on a file | Flag |
 | help | h | Provide information about how to use this program | Flag |
 | hidden | N/A | Access hidden files and folders | Flag |
+| ignore | i | Ignore | Flag |
 | interactive | i | Enable interactive mode | Flag |
+| json | j | Output formatted JSON | Flag |
+| quiet | q | Silence output | Flag |
 | verbose | N/A | Display detailed information about the program run | Flag |
 | version | v | Output current program version | Flag |
 
@@ -43,6 +49,7 @@ Currently 0%.
 * [ ] env -> environment
 * [ ] file -> file
 * [ ] find -> search
+* [ ] grep -> ripgrep
 * [ ] less -> view
 * [ ] link -> ?
 * [ ] ln -> ?
