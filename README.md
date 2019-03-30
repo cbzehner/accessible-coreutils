@@ -43,6 +43,10 @@ When possible, provide guidance for new users to proceed from basic use cases (e
 
 The default delimiter should always be spaces. Other delimiters can be specified using the `--delimiter` option.
 
+## Approach
+
+Building a friendly-commandline is not an all or nothing undertaking. There are existing utilities that improve upon the current standard utilities in a variety of ways, `rg` instead of `grep` and `bat` rather than `cat`. In many cases, we might choose to re-use these tools rather than building something new.
+
 ## Progress
 
 Currently 0%. This is just an idea about a problem and what it takes to fix it.
