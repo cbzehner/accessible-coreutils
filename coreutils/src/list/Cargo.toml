@@ -5,3 +5,5 @@ authors = ["Chris Zehner <cbzehner@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+structopt = "0.2.15"
+
