@@ -56,7 +56,7 @@ Currently 0%. This is just an idea about a problem and what it takes to fix it.
 - [ ] cmp -> compare
 - [ ] compress -> compress
 - [ ] cp -> copy
-- [ ] cut -> ???
+- [ ] cut -> split
 - [ ] ed -> edit
 - [ ] env -> environment
 - [ ] file -> file
