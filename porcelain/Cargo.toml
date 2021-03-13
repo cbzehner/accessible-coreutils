@@ -1,0 +1,11 @@
+[package]
+name = "porcelain"
+version = "0.1.0"
+authors = ["Chris Zehner <chris@cbzehner.com>"]
+edition = "2018"
+
+[dependencies]
+
+[dependencies.clap]
+version = "2"
+features = ["yaml"]

@@ -49,36 +49,8 @@ Building a friendly-commandline is not an all or nothing undertaking. There are 
 
 ## Progress
 
-Currently 0%. This is just an idea about a problem and what it takes to fix it.
+Currently 1%. This is just an idea about a problem and what it takes to fix it.
 
-- [ ] cat -> print
-- [ ] cd -> go/change/...?
-- [ ] cmp -> compare
-- [ ] compress -> compress
-- [ ] cp -> copy
-- [ ] cut -> split
-- [ ] ed -> edit
-- [ ] env -> environment
-- [ ] file -> file
-- [ ] find -> search
-- [ ] grep -> ripgrep
-- [ ] less -> view
-- [ ] link -> ?
-- [ ] ln -> ?
-- [ ] ls -> list
-- [ ] make -> make
-- [ ] man -> docs
-- [ ] mkdir -> create --dir/--file
-- [ ] mv -> move
-- [ ] mv -> rename
-- [ ] ps -> process
-- [ ] pwd -> where
-- [ ] rm -> delete
-- [ ] rm -> remove
-- [ ] sleep -> sleep
-- [ ] sort -> sort
-- [ ] time -> profile (include info about memory usage as well)
-- [ ] uniq -> unique
-- [ ] wc -> count
-- [ ] who -> who
-- [ ] yes -> yes
+The `aliases.sh` provides a starting point for testing out some of these names and this entire alternative experience with little initial commitment.
+
+There is also ongoing work on a `porcelain` utility which provides the ability to create new executables that remap onto the existing GNU `coreutils` and shell built-in functions. However, further work there will require building out a robust config system which can be used to both provide mappings and support the CLAP crate's existing functionality.

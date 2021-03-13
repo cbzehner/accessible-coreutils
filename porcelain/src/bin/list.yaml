@@ -1,0 +1,19 @@
+name: list
+about: Show the contents of a directory
+args:
+    - all:
+        short: a
+        long: all
+        help: List all entries, including hidden entries whose name begins with a dot (.), except for the current directory (.) and the parent directory (...)
+        default_value: -A # Map --all to the -A flag
+    - PATH:
+        help: Path of the directory to display
+        required: true
+        value_name: path/to/directory
+        default_value: . # Default to listing the current directory
+    - verbose:
+        short: v
+        multiple: true
+        help: Sets the level of verbosity
+    - version:
+        long: version
