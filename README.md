@@ -20,7 +20,23 @@ When something goes wrong, do not merely fail, but suggest a possible way to use
 
 When possible, provide guidance for new users to proceed from basic use cases (ex: `history | grep ls`) to more advanced uses.
 
-## Standard Options
+## Approach
+
+Building a friendly-commandline is not an all or nothing undertaking. There are existing utilities that improve upon the current standard utilities in a variety of ways, `rg` instead of `grep` and `bat` rather than `cat`. In many cases, we might choose to re-use these tools rather than building something new.
+
+## Progress
+
+Currently 1%. This is just an idea about a problem and what it takes to fix it.
+
+The `aliases.sh` provides a starting point for testing out some of these names and this entire alternative experience with little initial commitment.
+
+There is also ongoing work on a `porcelain` utility which provides the ability to create new executables that remap onto the existing GNU `coreutils` and shell built-in functions. However, further work there will require building out a robust config system which can be used to both provide mappings and support the CLAP crate's existing functionality.
+
+## Detailed Design
+
+Create internationalized configuration files which can be used by `porcelain` to build out a full set of wrapping executables on the existing command-line utilities.
+
+### Standard Options
 
 | Long name   | Short name | Description                                        | Type   |
 | ----------- | :--------: | -------------------------------------------------- | ------ |
@@ -39,18 +55,6 @@ When possible, provide guidance for new users to proceed from basic use cases (e
 | verbose     |    N/A     | Display detailed information about the program run | Flag   |
 | version     |     v      | Output current program version                     | Flag   |
 
-## Standardize Delimiters
+### Standardize Delimiters
 
 The default delimiter should always be spaces. Other delimiters can be specified using the `--delimiter` option.
-
-## Approach
-
-Building a friendly-commandline is not an all or nothing undertaking. There are existing utilities that improve upon the current standard utilities in a variety of ways, `rg` instead of `grep` and `bat` rather than `cat`. In many cases, we might choose to re-use these tools rather than building something new.
-
-## Progress
-
-Currently 1%. This is just an idea about a problem and what it takes to fix it.
-
-The `aliases.sh` provides a starting point for testing out some of these names and this entire alternative experience with little initial commitment.
-
-There is also ongoing work on a `porcelain` utility which provides the ability to create new executables that remap onto the existing GNU `coreutils` and shell built-in functions. However, further work there will require building out a robust config system which can be used to both provide mappings and support the CLAP crate's existing functionality.
