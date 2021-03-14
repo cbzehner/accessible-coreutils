@@ -2,6 +2,7 @@ use std::process;
 
 #[macro_use]
 extern crate clap;
+use atty::Stream;
 use clap::{App, Arg};
 use yaml_rust::Yaml;
 
@@ -9,6 +10,7 @@ use yaml_rust::Yaml;
 
 const FAILURE_UNKNOWN: i32 = -1;
 
+// TODO: Write tests!
 // #[cfg(test)]
 // mod tests {
 //     #[test]
@@ -17,6 +19,11 @@ const FAILURE_UNKNOWN: i32 = -1;
 //     }
 // }
 
+/// Given a CLAP-style YAML configuration file with a few additional fields (see below) build the executable wrapper
+/// which will be used to translate from the CLAP configuratino to the underlying binary.
+/// - executable: the name of the underlying binary wrapped by this library
+/// - humanize: a list of extra arguments to include if a human runs the command
+/// - map: for each non-positional argument, specify how to map the wrapper to the underlying binary
 pub fn build_executable(yaml: &Yaml) {
     // Build the wrapper based on the YAML configuration.
     let matches = App::from(yaml)
@@ -35,18 +42,23 @@ pub fn build_executable(yaml: &Yaml) {
         .version(crate_version!())
         .get_matches();
 
+    // Get the name of the underlying binary.
+    let command_name = yaml["executable"].as_str().unwrap();
+    // Initialize a vector to hold arguments to pass through to the underlying binary.
+    let mut command_args: Vec<&str> = vec![];
+
     // Print the version and exit when the version flag is requested.
     if matches.is_present("version") {
         println!("{}", crate_version!());
         process::exit(0)
     }
 
-    // TODO: If the command is run by a human, include the humanize flags.
-
-    // Get the name of the underlying binary.
-    let command_name = yaml["executable"].as_str().unwrap();
-    // Initialize a vector to hold arguments to pass through to the underlying binary.
-    let mut command_args: Vec<&str> = vec![];
+    // If the command is run by a human, include the humanize flags.
+    if atty::is(Stream::Stdout) {
+        if !&yaml["humanize"].is_badvalue() {
+            command_args.push(&yaml["humanize"].as_str().unwrap())
+        }
+    }
 
     // Iterate through the args from the YAML configuration.
     let wrapper_args = yaml["args"].as_vec().unwrap();

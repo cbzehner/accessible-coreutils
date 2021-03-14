@@ -3,16 +3,15 @@ about: Show the contents of a directory
 executable: ls
 humanize: -hG
 args:
-    - all:
-        short: a
-        long: all
-        about: List all entries, including hidden entries whose name begins with a dot (.), except for the current directory (.) and the parent directory (...)
-        map: -A
     - detail:
         short: d
         long: detail
         about: Show additional detailed information, known as the "long format" for each file.
         map: -l
+    - hidden:
+        long: hidden
+        about: List all entries, including hidden entries whose name begins with a dot (.), except for the current directory (.) and the parent directory (...)
+        map: -A
     # - sort:
     #     map:
     #         - size: -S
