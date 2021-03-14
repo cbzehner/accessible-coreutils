@@ -1,0 +1,18 @@
+name: luettelo
+about: Näytä hakemiston sisältö
+executable: ls
+humanize: -hG
+args:
+    - yksityiskohdat:
+        short: y
+        long: yksityiskohdat
+        about: Näytä yksityiskohtaiset lisätiedot, jotka tunnetaan nimellä "pitkä muoto" jokaiselle tiedostolle.
+        map: -l
+    - piilotettu:
+        long: piilotettu
+        about: Listaa kaikki merkinnät, mukaan lukien piilossa olevat kohdat, joiden nimi alkaa pisteellä (.), Paitsi nykyistä hakemistoa (.) Ja emohakemisto (...)
+        map: -A
+    - POLKU:
+        about: Näytettävän hakemiston polku
+        value_name: polku/hakemistoon
+        default_value: . # Default to listing the current directory

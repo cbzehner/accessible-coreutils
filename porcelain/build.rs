@@ -3,14 +3,15 @@ use std::fs;
 use std::path::Path;
 
 fn main() {
+    // Intentionally bypass the recommendation to rely on OUT_DIR
+    let project_root = env::var("CARGO_MANIFEST_DIR").unwrap();
+
     // TODO:
     // - Read accessible-coreutils.yaml
     // - Iterate through the top-level keys and create a binary for each one
     // - Support multiple languages
     let executable = "list";
 
-    // Intentionally bypass the recommendation to rely on OUT_DIR
-    let project_root = env::var("CARGO_MANIFEST_DIR").unwrap();
     let dest_path =
         Path::new(&format!("{}/src/bin/", project_root)).join(format!("{}.rs", executable));
     fs::write(
