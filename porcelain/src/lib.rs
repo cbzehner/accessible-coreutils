@@ -19,7 +19,7 @@ const FAILURE_UNKNOWN: i32 = -1;
 
 pub fn build_executable(yaml: &Yaml) {
     // Build the wrapper based on the YAML configuration.
-    let matches = App::from_yaml(&yaml)
+    let matches = App::from(yaml)
         // Global arguments available in all binaries
         .args(&[
             // TODO: Set a verbosity level.
@@ -27,9 +27,9 @@ pub fn build_executable(yaml: &Yaml) {
             //     .short("v")
             //     .multiple(true)
             //     .help("Sets the level of verbosity"),
-            Arg::with_name("version")
+            Arg::new("version")
                 .long("version")
-                .help("Show the current version"),
+                .about("Show the current version"),
         ])
         .author(crate_authors!())
         .version(crate_version!())
@@ -78,6 +78,8 @@ pub fn build_executable(yaml: &Yaml) {
     }
 }
 
+/// Spawn a child process to run the named command with the provided arguments. Block until the process completes and then return the resulting status code and error message.
+/// Note: A successful (`Ok(i32)`) result does not indicate that the invoked command ran successfully (exit status: 0) but rather indicates that the wrapped command was successfully invoked.
 fn command(name: &str, arguments: Vec<&str>) -> Result<i32, String> {
     let child = process::Command::new(name)
         .args(&arguments)
