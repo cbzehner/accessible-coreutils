@@ -1,10 +1,24 @@
 name: list
 about: Show the contents of a directory
+executable: ls
+humanize: -hG
 args:
     - all:
         short: a
         long: all
         help: List all entries, including hidden entries whose name begins with a dot (.), except for the current directory (.) and the parent directory (...)
+        # map: -A
+    - detail:
+        short: d
+        long: detail
+        help: Show additional detailed information, known as the "long format" for each file.
+        # map: -l
+    # - sort:
+    #     map:
+    #         - size: -S
+    #         - modified: -t
+    #         - accessed: -u
+    #         - created: -U
     - PATH:
         help: Path of the directory to display
         required: true
