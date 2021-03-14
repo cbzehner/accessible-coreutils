@@ -1,4 +1,4 @@
-# acessible-coreutils
+# accessible-coreutils
 
 Friendly command-line utilities for practical programmers.
 
