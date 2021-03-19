@@ -9,6 +9,5 @@ atty = "0.2"
 yaml-rust = "0.4.5"
 
 [dependencies.clap]
-git = "https://github.com/cbzehner/clap"
-branch = "ignore-extra-fields-on-arg"
+git = "https://github.com/clap-rs/clap"
 features = ["yaml"]

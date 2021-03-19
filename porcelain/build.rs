@@ -24,7 +24,7 @@ extern crate clap;
 use porcelain::build_executable;
 
 fn main() {{
-    let yaml = load_yaml!("{}/configs/english/{}.yaml");
+    let yaml = load_yaml!("{}/src/translations/english/{}.yaml");
     build_executable(yaml);
 }}"###,
             project_root, executable

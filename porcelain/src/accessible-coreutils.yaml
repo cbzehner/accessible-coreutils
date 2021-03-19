@@ -1,0 +1,7 @@
+accessible-coreutils:
+  - list:
+    wraps: ls
+    humanize: -hG
+    map:
+      detail: -l
+      hidden: -A
